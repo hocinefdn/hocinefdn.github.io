@@ -6,14 +6,14 @@ const sections = {
   navbar: `
     <nav class="navbar" id="navbar">
       <div class="container nav-container">
-        <a href="#home" class="logo" aria-label="Retour à l'accueil">HF</a>
+        <a href="#home" class="logo" aria-label="Retour à l'accueil">Hocine FEDANI</a>
         
         <div class="nav-links" id="navLinks">
           <a href="#about">À propos</a>
           <a href="#skills">Compétences</a>
           <a href="#experience">Expérience</a>
           <a href="#projects">Projets</a>
-          <a href="#education">Formation</a>
+          <a href="#education">Formations</a>
           <a href="#contact" class="btn-contact">Contact</a>
         </div>
 
@@ -30,7 +30,7 @@ const sections = {
           <a href="#skills" class="mobile-menu-link">Compétences</a>
           <a href="#experience" class="mobile-menu-link">Expérience</a>
           <a href="#projects" class="mobile-menu-link">Projets</a>
-          <a href="#education" class="mobile-menu-link">Formation</a>
+          <a href="#education" class="mobile-menu-link">Formations</a>
           <a href="#contact" class="mobile-menu-link">Contact</a>
         </div>
       </div>
@@ -51,7 +51,10 @@ const sections = {
           PHP/Laravel, Java/Spring Boot/Quarkus et Angular/Vue.js
         </p>
         <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-          <a href="#projects" class="btn btn-primary">
+        <a href="/cv-hocine-fedani.pdf" class="btn btn-primary">
+          <i class="fas fa-file-pdf"></i> Télécharger CV
+        </a>
+          <a href="#projects" class="btn btn-secondary">
             <i class="fas fa-rocket"></i> Voir mes projets
           </a>
           <a href="#contact" class="btn btn-secondary">
@@ -83,7 +86,6 @@ const sections = {
     <section id="about" class="section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-label">Qui suis-je ?</span>
           <h3 class="section-title">À propos de moi</h3>
         </div>
         <div class="about-content">
@@ -125,7 +127,6 @@ const sections = {
     <section id="skills" class="section section-alt">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-label">Mes expertises</span>
           <h3 class="section-title">Compétences Techniques</h3>
         </div>
         <div class="skills-grid" id="skillsGrid"></div>
@@ -137,7 +138,6 @@ const sections = {
     <section id="experience" class="section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-label">Mon parcours</span>
           <h3 class="section-title">Expériences Professionnelles</h3>
         </div>
         <div class="timeline" id="timeline"></div>
@@ -149,8 +149,7 @@ const sections = {
     <section id="projects" class="section section-alt">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-label">Réalisations</span>
-          <h3 class="section-title">Projets Personnels</h3>
+          <h3 class="section-title">Projets</h3>
         </div>
         <div class="projects-grid" id="projectsGrid"></div>
       </div>
@@ -161,8 +160,7 @@ const sections = {
     <section id="education" class="section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-label">Académique</span>
-          <h3 class="section-title">Formation</h3>
+          <h3 class="section-title">Formations</h3>
         </div>
         <div class="education-grid" id="educationGrid"></div>
       </div>
@@ -173,7 +171,6 @@ const sections = {
     <section id="contact" class="section section-alt">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-label">Restons connectés</span>
           <h3 class="section-title">Contactez-moi</h3>
         </div>
         <div class="contact-content">
@@ -189,13 +186,7 @@ const sections = {
                 <p>hocinefedani@gmail.com</p>
               </div>
             </a>
-            <a href="https://github.com/hocinefdn" target="_blank" rel="noopener noreferrer" class="contact-card" data-aos="zoom-in" data-aos-delay="300">
-              <i class="fab fa-github"></i>
-              <div>
-                <h5>GitHub</h5>
-                <p>@hocinefdn</p>
-              </div>
-            </a>
+           
             <a href="https://linkedin.com/in/hocine-fedani" target="_blank" rel="noopener noreferrer" class="contact-card" data-aos="zoom-in" data-aos-delay="400">
               <i class="fab fa-linkedin"></i>
               <div>
@@ -203,30 +194,6 @@ const sections = {
                 <p>hocine-fedani</p>
               </div>
             </a>
-          </div>
-
-          <div class="contact-form-container" data-aos="fade-up" data-aos-delay="500">
-            <form class="contact-form" id="contactForm">
-              <div class="form-group">
-                <label for="name">Nom complet</label>
-                <input type="text" id="name" name="name" required placeholder="Votre nom" />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="votre@email.com" />
-              </div>
-              <div class="form-group">
-                <label for="subject">Sujet</label>
-                <input type="text" id="subject" name="subject" required placeholder="Sujet de votre message" />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-submit">
-                <i class="fas fa-paper-plane"></i> Envoyer le message
-              </button>
-            </form>
           </div>
         </div>
       </div>
@@ -237,18 +204,18 @@ const sections = {
     <footer class="footer">
       <div class="container">
         <p>
-          © 2024 Hocine FEDANI - Développé avec <i class="fas fa-heart"></i> et
+          © 2026 Hocine FEDANI - Développé avec <i class="fas fa-heart"></i> et
           <i class="fas fa-code"></i>
         </p>
         <p class="footer-subtitle">Hébergé sur GitHub Pages</p>
       </div>
     </footer>
-  `
+  `,
 };
 
 // Load all sections
 function loadSections() {
-  Object.keys(sections).forEach(key => {
+  Object.keys(sections).forEach((key) => {
     const container = document.getElementById(`${key}-container`);
     if (container) {
       container.innerHTML = sections[key];
@@ -257,8 +224,8 @@ function loadSections() {
 }
 
 // Execute on DOM load
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', loadSections);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", loadSections);
 } else {
   loadSections();
 }

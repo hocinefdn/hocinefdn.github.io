@@ -33,8 +33,13 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .hero-content {
@@ -46,7 +51,7 @@
 
 .hero-badge {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(43, 255, 0, 0.377);
   backdrop-filter: blur(10px);
   padding: var(--spacing-xs) 20px;
   border-radius: var(--radius-full);
