@@ -1,0 +1,79 @@
+/* ===============================================
+   FORMS COMPONENT
+   =============================================== */
+
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  background: white;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--text-sm);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px var(--spacing-sm);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-family: inherit;
+  transition: all var(--transition-base);
+  background: var(--bg-light);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: var(--spacing-sm);
+}
+
+/* Form Validation States */
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #ef4444;
+}
+
+.form-group input.success,
+.form-group textarea.success {
+  border-color: #10b981;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: var(--text-sm);
+  margin-top: var(--spacing-xs);
+  display: none;
+}
+
+.form-group.has-error .error-message {
+  display: block;
+}

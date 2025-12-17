@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://hocinefdn.github.io/sitemap.xml

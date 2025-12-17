@@ -1,0 +1,143 @@
+/* ===============================================
+   RESPONSIVE STYLES
+   =============================================== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+  /* Navigation */
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  /* Sections */
+  .section {
+    padding: 60px 0;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-content {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* About */
+  .about-text {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Timeline */
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+  }
+
+  .timeline-dot {
+    left: 0;
+  }
+
+  .job-header {
+    flex-direction: column;
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Education */
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Contact */
+  .contact-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-form {
+    padding: var(--spacing-md);
+  }
+
+  /* Back to top */
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .project-content {
+    padding: var(--spacing-md);
+  }
+
+  .skill-card,
+  .project-card,
+  .education-card {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Large screens (1400px and above) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
