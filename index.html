@@ -3,19 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Hocine FEDANI</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Hocine FEDANI - Développeur Full Stack | PHP, Java, Angular</title>
+    <meta name="description" content="Développeur Full Stack spécialisé en PHP/Laravel, Java/Spring Boot/Quarkus et Angular/Vue.js. 3+ années d'expérience en développement web moderne et architecture d'applications." />
+    <meta name="keywords" content="Développeur Full Stack, PHP, Laravel, Java, Spring Boot, Quarkus, Angular, Vue.js, React, Développeur Web" />
+    <meta name="author" content="Hocine FEDANI" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hocinefdn.github.io/" />
+    <meta property="og:title" content="Hocine FEDANI - Développeur Full Stack" />
+    <meta property="og:description" content="Développeur Full Stack passionné avec 3+ années d'expérience en développement d'applications web modernes." />
+    <meta property="og:image" content="https://hocinefdn.github.io/assets/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://hocinefdn.github.io/" />
+    <meta property="twitter:title" content="Hocine FEDANI - Développeur Full Stack" />
+    <meta property="twitter:description" content="Développeur Full Stack passionné avec 3+ années d'expérience en développement d'applications web modernes." />
+    <meta property="twitter:image" content="https://hocinefdn.github.io/assets/og-image.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
       <div class="container nav-container">
-        <a href="#" class="logo">HF</a>
-        <div class="nav-links">
+        <a href="#home" class="logo" aria-label="Retour à l'accueil">HF</a>
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-links" id="navLinks">
           <a href="#about">À propos</a>
           <a href="#skills">Compétences</a>
           <a href="#experience">Expérience</a>
@@ -23,23 +51,42 @@
           <a href="#education">Formation</a>
           <a href="#contact" class="btn-contact">Contact</a>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu de navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+          <a href="#about" class="mobile-menu-link">À propos</a>
+          <a href="#skills" class="mobile-menu-link">Compétences</a>
+          <a href="#experience" class="mobile-menu-link">Expérience</a>
+          <a href="#projects" class="mobile-menu-link">Projets</a>
+          <a href="#education" class="mobile-menu-link">Formation</a>
+          <a href="#contact" class="mobile-menu-link">Contact</a>
+        </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero" id="home">
       <div class="hero-overlay"></div>
       <div class="container hero-content">
-        <div class="hero-badge">Disponible pour de nouvelles opportunités</div>
-        <h1 class="hero-title">
+        <div class="hero-badge" data-aos="fade-down">Disponible pour de nouvelles opportunités</div>
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
           Bonjour, je suis <span class="gradient-text">Hocine FEDANI</span>
         </h1>
-        <h2 class="hero-subtitle">Développeur Full Stack</h2>
-        <p class="hero-description">
+        <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Développeur Full Stack</h2>
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
           Je crée des applications web modernes et performantes avec
           PHP/Laravel, Java/Spring Boot/Quarkus et Angular/Vue.js
         </p>
-        <div class="hero-buttons">
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
           <a href="#projects" class="btn btn-primary">
             <i class="fas fa-rocket"></i> Voir mes projets
           </a>
@@ -47,32 +94,37 @@
             <i class="fas fa-envelope"></i> Me contacter
           </a>
         </div>
-        <div class="social-links">
+        <div class="social-links" data-aos="fade-up" data-aos-delay="500">
           <a
             href="mailto:hocinefedani@gmail.com"
             class="social-icon"
             title="Email"
+            aria-label="Envoyer un email"
           >
             <i class="fas fa-envelope"></i>
           </a>
           <a
             href="https://github.com/hocinefdn"
             target="_blank"
+            rel="noopener noreferrer"
             class="social-icon"
             title="GitHub"
+            aria-label="Voir mon profil GitHub"
           >
             <i class="fab fa-github"></i>
           </a>
           <a
             href="https://linkedin.com/in/hocine-fedani"
             target="_blank"
+            rel="noopener noreferrer"
             class="social-icon"
             title="LinkedIn"
+            aria-label="Voir mon profil LinkedIn"
           >
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
-        <p class="location">
+        <p class="location" data-aos="fade-up" data-aos-delay="600">
           <i class="fas fa-map-marker-alt"></i> Sartrouville, Île-de-France
         </p>
       </div>
@@ -84,12 +136,12 @@
     <!-- About Section -->
     <section id="about" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-label">Qui suis-je ?</span>
           <h3 class="section-title">À propos de moi</h3>
         </div>
         <div class="about-content">
-          <div class="about-text">
+          <div class="about-text" data-aos="fade-up" data-aos-delay="100">
             <p class="lead">
               Développeur Full Stack titulaire d'un master en ingénierie des
               systèmes d'information, je combine expertise technique et passion
@@ -104,15 +156,15 @@
               full stack.
             </p>
             <div class="about-stats">
-              <div class="stat">
+              <div class="stat" data-aos="zoom-in" data-aos-delay="200">
                 <div class="stat-number">3+</div>
                 <div class="stat-label">Années d'expérience</div>
               </div>
-              <div class="stat">
+              <div class="stat" data-aos="zoom-in" data-aos-delay="300">
                 <div class="stat-number">10+</div>
                 <div class="stat-label">Projets réalisés</div>
               </div>
-              <div class="stat">
+              <div class="stat" data-aos="zoom-in" data-aos-delay="400">
                 <div class="stat-number">5+</div>
                 <div class="stat-label">Technologies maîtrisées</div>
               </div>
@@ -125,12 +177,12 @@
     <!-- Skills Section -->
     <section id="skills" class="section section-alt">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-label">Mes expertises</span>
           <h3 class="section-title">Compétences Techniques</h3>
         </div>
         <div class="skills-grid">
-          <div class="skill-card">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
             <div class="skill-icon">
               <i class="fas fa-server"></i>
             </div>
@@ -144,7 +196,7 @@
               <span class="tag">REST APIs</span>
             </div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
             <div class="skill-icon">
               <i class="fas fa-code"></i>
             </div>
@@ -158,7 +210,7 @@
               <span class="tag">Tailwind CSS</span>
             </div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
             <div class="skill-icon">
               <i class="fas fa-database"></i>
             </div>
@@ -179,12 +231,12 @@
     <!-- Experience Section -->
     <section id="experience" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-label">Mon parcours</span>
           <h3 class="section-title">Expériences Professionnelles</h3>
         </div>
         <div class="timeline">
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <div class="job-header">
@@ -196,7 +248,7 @@
                   </p>
                 </div>
                 <span class="job-date">
-                  <i class="far fa-calendar"></i> Juin 2023 - Janv 2026
+                  <i class="far fa-calendar"></i> Juin 2023 - Présent
                 </span>
               </div>
               <ul class="job-highlights">
@@ -224,7 +276,7 @@
             </div>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <div class="job-header">
@@ -264,16 +316,14 @@
     <!-- Projects Section -->
     <section id="projects" class="section section-alt">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-label">Réalisations</span>
           <h3 class="section-title">Projets Personnels</h3>
         </div>
         <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-image">
-              <div class="project-overlay">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+              <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=E-commerce+Multi-boutiques" alt="Application E-commerce" loading="lazy" />
             </div>
             <div class="project-content">
               <h4>App E-commerce Multi-boutiques</h4>
@@ -287,21 +337,31 @@
                 <span class="tag">Blade</span>
                 <span class="tag">MySQL</span>
               </div>
-              <a
-                href="https://holyz-shop.com"
-                target="_blank"
-                class="project-link"
-              >
-                Voir le site <i class="fas fa-arrow-right"></i>
-              </a>
+              <div class="project-links">
+                <a
+                  href="https://holyz-shop.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                >
+                  Voir le site <i class="fas fa-arrow-right"></i>
+                </a>
+                <a
+                  href="https://github.com/hocinefdn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link project-link-secondary"
+                  aria-label="Code source sur GitHub"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="project-card">
-            <div class="project-image">
-              <div class="project-overlay">
-                <i class="fas fa-flag-checkered"></i>
-              </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+              <img src="https://via.placeholder.com/600x400/f093fb/ffffff?text=Clone+Formula1" alt="Clone Formula 1" loading="lazy" />
             </div>
             <div class="project-content">
               <h4>Clone Formula1.com</h4>
@@ -314,14 +374,22 @@
                 <span class="tag">Angular</span>
                 <span class="tag">Java</span>
               </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/hocinefdn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                >
+                  <i class="fab fa-github"></i> Voir le code <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="project-card">
-            <div class="project-image">
-              <div class="project-overlay">
-                <i class="fas fa-utensils"></i>
-              </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+              <img src="https://via.placeholder.com/600x400/4facfe/ffffff?text=Gestion+Restaurant" alt="Application de gestion de restaurant" loading="lazy" />
             </div>
             <div class="project-content">
               <h4>Gestion de Restaurant</h4>
@@ -332,6 +400,17 @@
               <div class="project-tags">
                 <span class="tag">Laravel</span>
                 <span class="tag">Blade</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/hocinefdn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                >
+                  <i class="fab fa-github"></i> Voir le code <i class="fas fa-arrow-right"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -342,12 +421,12 @@
     <!-- Education Section -->
     <section id="education" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-label">Académique</span>
           <h3 class="section-title">Formation</h3>
         </div>
         <div class="education-grid">
-          <div class="education-card">
+          <div class="education-card" data-aos="fade-up" data-aos-delay="100">
             <div class="education-icon">
               <i class="fas fa-graduation-cap"></i>
             </div>
@@ -362,7 +441,7 @@
               </p>
             </div>
           </div>
-          <div class="education-card">
+          <div class="education-card" data-aos="fade-up" data-aos-delay="200">
             <div class="education-icon">
               <i class="fas fa-graduation-cap"></i>
             </div>
@@ -384,17 +463,17 @@
     <!-- Contact Section -->
     <section id="contact" class="section section-alt">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-label">Restons connectés</span>
           <h3 class="section-title">Contactez-moi</h3>
         </div>
         <div class="contact-content">
-          <p class="contact-text">
+          <p class="contact-text" data-aos="fade-up" data-aos-delay="100">
             Je suis toujours intéressé par de nouveaux défis et opportunités.
             N'hésitez pas à me contacter !
           </p>
           <div class="contact-methods">
-            <a href="mailto:hocinefedani@gmail.com" class="contact-card">
+            <a href="mailto:hocinefedani@gmail.com" class="contact-card" data-aos="zoom-in" data-aos-delay="200">
               <i class="fas fa-envelope"></i>
               <div>
                 <h5>Email</h5>
@@ -404,7 +483,10 @@
             <a
               href="https://github.com/hocinefdn"
               target="_blank"
+              rel="noopener noreferrer"
               class="contact-card"
+              data-aos="zoom-in"
+              data-aos-delay="300"
             >
               <i class="fab fa-github"></i>
               <div>
@@ -415,7 +497,10 @@
             <a
               href="https://linkedin.com/in/hocine-fedani"
               target="_blank"
+              rel="noopener noreferrer"
               class="contact-card"
+              data-aos="zoom-in"
+              data-aos-delay="400"
             >
               <i class="fab fa-linkedin"></i>
               <div>
@@ -423,6 +508,31 @@
                 <p>hocine-fedani</p>
               </div>
             </a>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-container" data-aos="fade-up" data-aos-delay="500">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" required placeholder="Votre nom" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="votre@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="subject">Sujet</label>
+                <input type="text" id="subject" name="subject" required placeholder="Sujet de votre message" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">
+                <i class="fas fa-paper-plane"></i> Envoyer le message
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -432,11 +542,23 @@
     <footer class="footer">
       <div class="container">
         <p>
-          © 2026 Hocine FEDANI - Développé avec <i class="fas fa-heart"></i> et
+          © 2024 Hocine FEDANI - Développé avec <i class="fas fa-heart"></i> et
           <i class="fas fa-code"></i>
         </p>
         <p class="footer-subtitle">Hébergé sur GitHub Pages</p>
       </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS Library (Animation on Scroll) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>
