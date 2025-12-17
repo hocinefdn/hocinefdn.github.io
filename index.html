@@ -3,233 +3,440 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Hocine FEDANI | Full Stack Dev</title>
+    <title>Portfolio - Hocine FEDANI</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
   <body>
-    <header class="hero">
-      <div class="container hero-content">
-        <span class="greeting">Bonjour, je suis</span>
-        <h1>Hocine FEDANI</h1>
-        <h2 class="gradient-text">Développeur Full Stack</h2>
-        <p class="tech-stack">
-          PHP/Laravel <span class="dot">•</span> Java/Spring Boot
-          <span class="dot">•</span> Angular/Vue.js
-        </p>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo">HF</a>
+        <div class="nav-links">
+          <a href="#about">À propos</a>
+          <a href="#skills">Compétences</a>
+          <a href="#experience">Expérience</a>
+          <a href="#projects">Projets</a>
+          <a href="#education">Formation</a>
+          <a href="#contact" class="btn-contact">Contact</a>
+        </div>
+      </div>
+    </nav>
 
-        <div class="social-links">
-          <a href="mailto:hocinefedani@gmail.com" class="btn btn-outline">
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">Disponible pour de nouvelles opportunités</div>
+        <h1 class="hero-title">
+          Bonjour, je suis <span class="gradient-text">Hocine FEDANI</span>
+        </h1>
+        <h2 class="hero-subtitle">Développeur Full Stack</h2>
+        <p class="hero-description">
+          Je crée des applications web modernes et performantes avec
+          PHP/Laravel, Java/Spring Boot/Quarkus et Angular/Vue.js
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> Voir mes projets
+          </a>
+          <a href="#contact" class="btn btn-secondary">
             <i class="fas fa-envelope"></i> Me contacter
+          </a>
+        </div>
+        <div class="social-links">
+          <a
+            href="mailto:hocinefedani@gmail.com"
+            class="social-icon"
+            title="Email"
+          >
+            <i class="fas fa-envelope"></i>
           </a>
           <a
             href="https://github.com/hocinefdn"
             target="_blank"
-            class="icon-link"
+            class="social-icon"
+            title="GitHub"
           >
             <i class="fab fa-github"></i>
           </a>
           <a
             href="https://linkedin.com/in/hocine-fedani"
             target="_blank"
-            class="icon-link"
+            class="social-icon"
+            title="LinkedIn"
           >
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
         <p class="location">
-          <i class="fas fa-map-marker-alt"></i> 78500 Sartrouville,
-          Île-de-France
+          <i class="fas fa-map-marker-alt"></i> Sartrouville, Île-de-France
         </p>
+      </div>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
       </div>
     </header>
 
-    <section id="about" class="container section-fade">
-      <div class="section-header">
-        <h3>À propos</h3>
-      </div>
-      <div class="card about-card">
-        <p>
-          [cite_start]Développeur Full Stack titulaire d'un
-          <strong>Master en ingénierie des systèmes d'information</strong>[cite:
-          10]. Je conçois et maintiens des architectures robustes et des API
-          REST sécurisées. Passionné par l'agilité, je maîtrise la migration
-          d'applications (Legacy PHP vers Java/Quarkus) [cite_start]et le
-          développement de nouvelles fonctionnalités full stack[cite: 36, 40].
-        </p>
-      </div>
-    </section>
-
-    <section id="skills" class="container">
-      <div class="section-header">
-        <h3>Compétences Techniques</h3>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <i class="fas fa-server skill-icon"></i>
-          <h4>Backend</h4>
-          [cite_start]
-          <p>
-            PHP, Java, Laravel, Spring Boot, Quarkus, REST APIs [cite: 57, 59]
-          </p>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Qui suis-je ?</span>
+          <h3 class="section-title">À propos de moi</h3>
         </div>
-        <div class="skill-card">
-          <i class="fas fa-laptop-code skill-icon"></i>
-          <h4>Frontend</h4>
-          [cite_start]
-          <p>
-            JavaScript, TypeScript, Angular, Vue.js, React.js, Tailwind CSS
-            [cite: 57, 59]
-          </p>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-database skill-icon"></i>
-          <h4>Data & Tools</h4>
-          [cite_start]
-          <p>
-            MySQL, PostgreSQL, Docker, Git, CI/CD (GitHub Actions) [cite: 63,
-            65]
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="container">
-      <div class="section-header">
-        <h3>Expériences</h3>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">Juin 2023 - Janv 2026</div>
-          <div class="timeline-content">
-            <h4>Développeur Web Full Stack</h4>
-            [cite_start]
-            <p class="company">
-              Beyn (Algeria e-Banking Services) - Alger [cite: 26]
+        <div class="about-content">
+          <div class="about-text">
+            <p class="lead">
+              Développeur Full Stack titulaire d'un master en ingénierie des
+              systèmes d'information, je combine expertise technique et passion
+              pour l'innovation.
             </p>
-            <ul>
-              [cite_start]
-              <li>
-                Migration complète d'une app de gestion d'abonnements PHP vers
-                une architecture Java (Quarkus) et Angular[cite: 36].
-              </li>
-              [cite_start]
-              <li>
-                Développement de fonctionnalités sur des applications
-                PHP/Laravel existantes[cite: 40].
-              </li>
-              [cite_start]
-              <li>
-                Analyse et résolution d'anomalies en production et optimisation
-                de bases de données[cite: 43].
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">Sept 2022 - Juin 2023</div>
-          <div class="timeline-content">
-            <h4>Développeur Web Full Stack</h4>
-            [cite_start]
-            <p class="company">SoftArt - Alger [cite: 47]</p>
-            <ul>
-              [cite_start]
-              <li>
-                Maintenance et évolution d'une plateforme de gestion
-                d'événements (Vue.js / Laravel)[cite: 50].
-              </li>
-              [cite_start]
-              <li>
-                Optimisation des parcours utilisateurs et collaboration directe
-                avec l'équipe projet[cite: 53, 54].
-              </li>
-            </ul>
+            <p>
+              Je conçois et maintiens des
+              <strong>architectures robustes</strong> et des
+              <strong>API REST sécurisées</strong>. Passionné par l'agilité, je
+              maîtrise la migration d'applications (Legacy PHP vers
+              Java/Quarkus) et le développement de nouvelles fonctionnalités
+              full stack.
+            </p>
+            <div class="about-stats">
+              <div class="stat">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Années d'expérience</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Projets réalisés</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Technologies maîtrisées</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="container">
-      <div class="section-header">
-        <h3>Projets Personnels</h3>
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Mes expertises</span>
+          <h3 class="section-title">Compétences Techniques</h3>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h4>Backend</h4>
+            <div class="skill-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">Java</span>
+              <span class="tag">Laravel</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Quarkus</span>
+              <span class="tag">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h4>Frontend</h4>
+            <div class="skill-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Angular</span>
+              <span class="tag">Vue.js</span>
+              <span class="tag">React.js</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h4>Data & DevOps</h4>
+            <div class="skill-tags">
+              <span class="tag">MySQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Git</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">GitHub Actions</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="card-top">
-            <i class="fas fa-folder-open folder-icon"></i>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Mon parcours</span>
+          <h3 class="section-title">Expériences Professionnelles</h3>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="job-header">
+                <div>
+                  <h4>Développeur Web Full Stack</h4>
+                  <p class="company">
+                    <i class="fas fa-building"></i> Beyn (Algeria e-Banking
+                    Services) - Alger
+                  </p>
+                </div>
+                <span class="job-date">
+                  <i class="far fa-calendar"></i> Juin 2023 - Janv 2026
+                </span>
+              </div>
+              <ul class="job-highlights">
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Migration complète d'une app de gestion d'abonnements PHP vers
+                  une architecture Java (Quarkus) et Angular
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Développement de fonctionnalités sur des applications
+                  PHP/Laravel existantes
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Analyse et résolution d'anomalies en production et
+                  optimisation de bases de données
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Contribution à l'architecture applicative et rédaction de
+                  documentation technique
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="job-header">
+                <div>
+                  <h4>Développeur Web Full Stack</h4>
+                  <p class="company">
+                    <i class="fas fa-building"></i> SoftArt - Alger
+                  </p>
+                </div>
+                <span class="job-date">
+                  <i class="far fa-calendar"></i> Sept 2022 - Juin 2023
+                </span>
+              </div>
+              <ul class="job-highlights">
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Maintenance et évolution d'une plateforme de gestion
+                  d'événements (Vue.js / Laravel)
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Optimisation des parcours utilisateurs et amélioration des
+                  performances
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  Collaboration directe avec l'équipe projet pour analyser les
+                  besoins clients
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Réalisations</span>
+          <h3 class="section-title">Projets Personnels</h3>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h4>App E-commerce Multi-boutiques</h4>
+              <p>
+                Développement complet d'une solution e-commerce permettant la
+                gestion de plusieurs boutiques avec un système de paiement
+                intégré.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Laravel</span>
+                <span class="tag">Blade</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <a
+                href="https://holyz-shop.com"
+                target="_blank"
+                class="project-link"
+              >
+                Voir le site <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <i class="fas fa-flag-checkered"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h4>Clone Formula1.com</h4>
+              <p>
+                Réplique fidèle du site officiel de F1 avec gestion en temps
+                réel des courses, classements des pilotes et statistiques.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Angular</span>
+                <span class="tag">Java</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <i class="fas fa-utensils"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h4>Gestion de Restaurant</h4>
+              <p>
+                Application complète de gestion des commandes, stocks et
+                réservations pour restaurants avec interface intuitive.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Laravel</span>
+                <span class="tag">Blade</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Académique</span>
+          <h3 class="section-title">Formation</h3>
+        </div>
+        <div class="education-grid">
+          <div class="education-card">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <h4>Master Ingénierie des Systèmes d'Information</h4>
+              <p class="education-school">
+                <i class="fas fa-university"></i> Université Mouloud Mammeri,
+                Tizi Ouzou
+              </p>
+              <p class="education-date">
+                <i class="far fa-calendar"></i> 2020 - 2022
+              </p>
+            </div>
+          </div>
+          <div class="education-card">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <h4>Licence Informatique</h4>
+              <p class="education-school">
+                <i class="fas fa-university"></i> Université Mouloud Mammeri,
+                Tizi Ouzou
+              </p>
+              <p class="education-date">
+                <i class="far fa-calendar"></i> 2017 - 2020
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Restons connectés</span>
+          <h3 class="section-title">Contactez-moi</h3>
+        </div>
+        <div class="contact-content">
+          <p class="contact-text">
+            Je suis toujours intéressé par de nouveaux défis et opportunités.
+            N'hésitez pas à me contacter !
+          </p>
+          <div class="contact-methods">
+            <a href="mailto:hocinefedani@gmail.com" class="contact-card">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h5>Email</h5>
+                <p>hocinefedani@gmail.com</p>
+              </div>
+            </a>
             <a
-              href="https://holyz-shop.com"
+              href="https://github.com/hocinefdn"
               target="_blank"
-              class="external-link"
-              ><i class="fas fa-external-link-alt"></i
-            ></a>
+              class="contact-card"
+            >
+              <i class="fab fa-github"></i>
+              <div>
+                <h5>GitHub</h5>
+                <p>@hocinefdn</p>
+              </div>
+            </a>
+            <a
+              href="https://linkedin.com/in/hocine-fedani"
+              target="_blank"
+              class="contact-card"
+            >
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <h5>LinkedIn</h5>
+                <p>hocine-fedani</p>
+              </div>
+            </a>
           </div>
-          <h4>App E-commerce</h4>
-          [cite_start]
-          <p>Solution multi-boutiques complète[cite: 73].</p>
-          <div class="tags">
-            <span>Laravel</span><span>Blade</span><span>MySQL</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="card-top">
-            <i class="fas fa-folder-open folder-icon"></i>
-          </div>
-          <h4>Clone Formula1.com</h4>
-          [cite_start]
-          <p>Réplique du site F1, gestion courses et pilotes[cite: 77].</p>
-          <div class="tags">
-            <span>Spring Boot</span><span>Angular</span><span>Java</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="card-top">
-            <i class="fas fa-folder-open folder-icon"></i>
-          </div>
-          <h4>Gestion Restaurant</h4>
-          [cite_start]
-          <p>App de gestion des commandes et stocks[cite: 75].</p>
-          <div class="tags"><span>Laravel</span><span>Blade</span></div>
         </div>
       </div>
     </section>
 
-    <section id="education" class="container">
-      <div class="section-header">
-        <h3>Formation</h3>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          © 2026 Hocine FEDANI - Développé avec <i class="fas fa-heart"></i> et
+          <i class="fas fa-code"></i>
+        </p>
+        <p class="footer-subtitle">Hébergé sur GitHub Pages</p>
       </div>
-      <div class="education-grid">
-        <div class="school-card">
-          <span class="year">2020 - 2022</span>
-          <h4>Master Ingénierie SI</h4>
-          [cite_start]
-          <p>Université Mouloud Mammeri [cite: 11]</p>
-        </div>
-        <div class="school-card">
-          <span class="year">2017 - 2020</span>
-          <h4>Licence Informatique</h4>
-          [cite_start]
-          <p>Université Mouloud Mammeri [cite: 21]</p>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <p>© 2026 Hocine FEDANI | Construit avec <i class="fas fa-code"></i></p>
     </footer>
   </body>
 </html>
