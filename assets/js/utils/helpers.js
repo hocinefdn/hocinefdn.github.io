@@ -4,33 +4,52 @@
 
 // Render skills dynamically
 function renderSkills() {
-  if (typeof skillsData === 'undefined') return;
-  
-  const container = document.getElementById('skillsGrid');
+  if (typeof skillsData === "undefined") return;
+
+  const container = document.getElementById("skillsGrid");
   if (!container) return;
-  
-  container.innerHTML = skillsData.map((skill, index) => `
-    <div class="skill-card" data-aos="fade-up" data-aos-delay="${(index + 1) * 100}">
+
+  container.innerHTML = skillsData
+    .map(
+      (skill, index) => `
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="${
+      (index + 1) * 100
+    }">
       <div class="skill-icon">
         <i class="${skill.icon}"></i>
       </div>
       <h4>${skill.title}</h4>
       <div class="skill-tags">
-        ${skill.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+        ${skill.tags
+          .map(
+            (tag) =>
+              `
+              <span class="tag">
+              <i class="${tag.icon}"></i> ${tag.name}
+              </span>
+              `
+          )
+          .join("")}
       </div>
     </div>
-  `).join('');
+  `
+    )
+    .join("");
 }
 
 // Render experience timeline dynamically
 function renderExperience() {
-  if (typeof experienceData === 'undefined') return;
-  
-  const container = document.getElementById('timeline');
+  if (typeof experienceData === "undefined") return;
+
+  const container = document.getElementById("timeline");
   if (!container) return;
-  
-  container.innerHTML = experienceData.map((exp, index) => `
-    <div class="timeline-item" data-aos="fade-right" data-aos-delay="${(index + 1) * 100}">
+
+  container.innerHTML = experienceData
+    .map(
+      (exp, index) => `
+    <div class="timeline-item" data-aos="fade-right" data-aos-delay="${
+      (index + 1) * 100
+    }">
       <div class="timeline-dot"></div>
       <div class="timeline-content">
         <div class="job-header">
@@ -45,27 +64,37 @@ function renderExperience() {
           </span>
         </div>
         <ul class="job-highlights">
-          ${exp.highlights.map(highlight => `
+          ${exp.highlights
+            .map(
+              (highlight) => `
             <li>
               <i class="fas fa-check-circle"></i>
               ${highlight}
             </li>
-          `).join('')}
+          `
+            )
+            .join("")}
         </ul>
       </div>
     </div>
-  `).join('');
+  `
+    )
+    .join("");
 }
 
 // Render projects dynamically
 function renderProjects() {
-  if (typeof projectsData === 'undefined') return;
-  
-  const container = document.getElementById('projectsGrid');
+  if (typeof projectsData === "undefined") return;
+
+  const container = document.getElementById("projectsGrid");
   if (!container) return;
-  
-  container.innerHTML = projectsData.map((project, index) => `
-    <div class="project-card" data-aos="fade-up" data-aos-delay="${(index + 1) * 100}">
+
+  container.innerHTML = projectsData
+    .map(
+      (project, index) => `
+    <div class="project-card" data-aos="fade-up" data-aos-delay="${
+      (index + 1) * 100
+    }">
       <div class="project-image" style="background: ${project.imageGradient};">
         <img src="${project.image}" alt="${project.title}" loading="lazy" />
       </div>
@@ -73,30 +102,46 @@ function renderProjects() {
         <h4>${project.title}</h4>
         <p>${project.description}</p>
         <div class="project-tags">
-          ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+          ${project.tags
+            .map((tag) => `<span class="tag">${tag}</span>`)
+            .join("")}
         </div>
         <div class="project-links">
-          ${project.links.map(link => `
+          ${project.links
+            .map(
+              (link) => `
             <a href="${link.url}" target="_blank" rel="noopener noreferrer" 
-               class="project-link ${link.type === 'secondary' ? 'project-link-secondary' : ''}">
-              <i class="${link.icon}"></i> ${link.label} <i class="fas fa-arrow-right"></i>
+               class="project-link ${
+                 link.type === "secondary" ? "project-link-secondary" : ""
+               }">
+              <i class="${link.icon}"></i> ${
+                link.label
+              } <i class="fas fa-arrow-right"></i>
             </a>
-          `).join('')}
+          `
+            )
+            .join("")}
         </div>
       </div>
     </div>
-  `).join('');
+  `
+    )
+    .join("");
 }
 
 // Render education dynamically
 function renderEducation() {
-  if (typeof educationData === 'undefined') return;
-  
-  const container = document.getElementById('educationGrid');
+  if (typeof educationData === "undefined") return;
+
+  const container = document.getElementById("educationGrid");
   if (!container) return;
-  
-  container.innerHTML = educationData.map((edu, index) => `
-    <div class="education-card" data-aos="fade-up" data-aos-delay="${(index + 1) * 100}">
+
+  container.innerHTML = educationData
+    .map(
+      (edu, index) => `
+    <div class="education-card" data-aos="fade-up" data-aos-delay="${
+      (index + 1) * 100
+    }">
       <div class="education-icon">
         <i class="fas fa-graduation-cap"></i>
       </div>
@@ -110,26 +155,28 @@ function renderEducation() {
         </p>
       </div>
     </div>
-  `).join('');
+  `
+    )
+    .join("");
 }
 
 // Lazy load images
 function initLazyLoading() {
-  if ('IntersectionObserver' in window) {
+  if ("IntersectionObserver" in window) {
     const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target;
           if (img.dataset.src) {
             img.src = img.dataset.src;
-            img.removeAttribute('data-src');
+            img.removeAttribute("data-src");
           }
           imageObserver.unobserve(img);
         }
       });
     });
-    
-    document.querySelectorAll('img[data-src]').forEach(img => {
+
+    document.querySelectorAll("img[data-src]").forEach((img) => {
       imageObserver.observe(img);
     });
   }

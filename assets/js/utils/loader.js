@@ -51,7 +51,7 @@ const sections = {
           PHP/Laravel, Java/Spring Boot/Quarkus et Angular/Vue.js
         </p>
         <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-        <a href="/cv-hocine-fedani.pdf" class="btn btn-primary">
+        <a href="/cv-hocine-fedani.pdf" target="_blank" class="btn btn-primary">
           <i class="fas fa-file-pdf"></i> Télécharger CV
         </a>
           <a href="#projects" class="btn btn-secondary">
@@ -90,19 +90,22 @@ const sections = {
         </div>
         <div class="about-content">
           <div class="about-text" data-aos="fade-up" data-aos-delay="100">
-            <p class="lead">
-              Développeur Full Stack titulaire d'un master en ingénierie des
-              systèmes d'information, je combine expertise technique et passion
-              pour l'innovation.
-            </p>
-            <p>
-              Je conçois et maintiens des
-              <strong>architectures robustes</strong> et des
-              <strong>API REST sécurisées</strong>. Passionné par l'agilité, je
-              maîtrise la migration d'applications (Legacy PHP vers
-              Java/Quarkus) et le développement de nouvelles fonctionnalités
-              full stack.
-            </p>
+          <h1 class="display-4">Concevoir, Développer, Déployer.</h1>
+          <p class="lead">
+              <strong>Expert PHP/Laravel et Java (Spring Boot, Quarkus)</strong>, 
+              je maîtrise l'ensemble du cycle de vie d'une application. 
+              Titulaire d'un <strong>Master en ingénierie des systèmes d'information</strong>, 
+              j'apporte une vision Full Stack orientée vers l'excellence opérationnelle.
+          </p>
+          <p>
+              Qu'il s'agisse de <strong>moderniser des systèmes existants</strong>
+              ou de bâtir des interfaces réactives en <strong>Angular ou Vue.js</strong>, je garantis la stabilité 
+              et la performance de vos solutions en production.
+          </p>
+          <p>
+              Je conçois et maintiens des <strong>architectures robustes</strong> et des <strong>API REST sécurisées</strong> 
+              tout en contribuant à accélérer les cycles de livraison dans un environnement Agile.
+          </p>
             <div class="about-stats">
               <div class="stat" data-aos="zoom-in" data-aos-delay="200">
                 <div class="stat-number">3+</div>
@@ -113,8 +116,8 @@ const sections = {
                 <div class="stat-label">Projets réalisés</div>
               </div>
               <div class="stat" data-aos="zoom-in" data-aos-delay="400">
-                <div class="stat-number">5+</div>
-                <div class="stat-label">Technologies maîtrisées</div>
+                <div class="stat-number">6+</div>
+                <div class="stat-label">Technologies clés</div>
               </div>
             </div>
           </div>
