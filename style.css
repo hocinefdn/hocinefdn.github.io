@@ -1,0 +1,162 @@
+:root {
+  --primary-color: #2563eb; /* Bleu professionnel */
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --bg-light: #f8fafc;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--bg-light);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--white);
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.hero h1 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+}
+
+.hero h2 {
+  margin: 10px 0;
+  color: var(--text-dark);
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Sections */
+section {
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+  display: inline-block;
+  color: var(--text-dark);
+}
+
+/* Skills Grid */
+.skills-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skill-card,
+.project-card {
+  background: var(--bg-light);
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.skill-card h4,
+.project-card h4 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+/* Experience */
+.job {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.job:last-child {
+  border-bottom: none;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.job-header h4 {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.job-header span {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.company {
+  font-weight: bold;
+  color: var(--text-light);
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* Tags for projects */
+.tags span {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .job-header {
+    flex-direction: column;
+  }
+}
