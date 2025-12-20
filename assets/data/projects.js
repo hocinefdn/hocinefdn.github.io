@@ -8,7 +8,8 @@ const projectsData = [
     description:
       "Développement complet d'une solution e-commerce permettant la gestion de plusieurs boutiques avec un système de paiement intégré.",
     tags: ["Laravel", "Blade", "MySQL", "Bootstrap", "Vue.js"],
-    image: "https://hocinefdn.github.io/assets/images/projects/holyz-shop.png",
+    image:
+      "https://hocinefdn.github.io/assets/images/projects/holyz-shop/home-1.png",
     imageGradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     links: [
       {
