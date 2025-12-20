@@ -56,8 +56,14 @@ function renderExperience() {
           <div>
             <h4>${exp.title}</h4>
             <p class="company">
-              <i class="fas fa-building"></i> ${exp.company}
+              <i class="fas fa-building"></i> 
+              <a href="${exp.website}" target="_blank" rel="noopener">
+                ${exp.company}
+              </a>
             </p>
+            <span class="sector-badge">
+              <i class="fas fa-layer-group"></i> ${exp.sector}
+            </span>
           </div>
           <span class="job-date">
             <i class="far fa-calendar"></i> ${exp.date}

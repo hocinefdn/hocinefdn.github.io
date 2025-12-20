@@ -106,7 +106,11 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, var(--primary-color), var(--primary-light));
+  background: linear-gradient(
+    180deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
 }
 
 .timeline-item {
@@ -167,6 +171,30 @@
 .company i {
   color: var(--primary-color);
   margin-right: var(--spacing-xs);
+}
+
+.company a:hover {
+  text-decoration: underline;
+}
+
+.sector-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+
+  padding: 4px 10px;
+  border-radius: 12px;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  background-color: rgba(59, 130, 246, 0.1); /* bleu doux */
+  color: #2563eb;
+}
+
+.sector-badge i {
+  font-size: 0.7rem;
 }
 
 .job-date {
