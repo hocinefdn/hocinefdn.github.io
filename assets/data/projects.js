@@ -24,7 +24,7 @@ const projectsData = [
   {
     title: "Clone Formula1.com",
     description:
-      "Réplique fidèle du site officiel de F1 avec gestion en temps réel des courses, classements des pilotes et statistiques.",
+      "Réplique du site officiel de F1 avec classements des pilotes et statistiques.",
     tags: ["Spring Boot", "Angular", "Java"],
     image:
       "https://hocinefdn.github.io/assets/images/projects/f1clone/team.png",
