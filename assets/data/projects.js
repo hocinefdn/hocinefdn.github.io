@@ -8,8 +8,7 @@ const projectsData = [
     description:
       "Développement complet d'une solution e-commerce permettant la gestion de plusieurs boutiques avec un système de paiement intégré.",
     tags: ["Laravel", "Blade", "MySQL", "Bootstrap", "Vue.js"],
-    image:
-      "https://via.placeholder.com/600x400/667eea/ffffff?text=E-commerce+Multi-boutiques",
+    image: "https://hocinefdn.github.io/assets/images/projects/holyz-shop.png",
     imageGradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     links: [
       {
