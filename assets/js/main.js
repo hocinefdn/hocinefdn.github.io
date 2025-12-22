@@ -2,39 +2,35 @@
 // MAIN JAVASCRIPT FILE
 // ===============================================
 
-document.addEventListener("sections:loaded", async () => {
-  try {
-    // 1️⃣ Charger les données
-    await loadDataFiles();
-
-    // 2️⃣ Render (HTML + DATA prêts)
-    renderSkills();
+document.addEventListener('DOMContentLoaded', () => {
+  // Load data files dynamically
+  loadDataFiles();
+  
+  // Initialize components after a short delay to ensure HTML is loaded
+  setTimeout(() => {
+    // Render dynamic content
+    renderSkills(); 
     renderExperience();
     renderProjects();
     renderEducation();
-
-    // 3️⃣ Init composants
+    
+    // Initialize components
     initNavbar();
     initHero();
     initContactForm();
-
-    // 4️⃣ Utils
+    
+    // Initialize utilities
+    initAOS();
     initSmoothScroll();
     initBackToTop();
     initLazyLoading();
-
-    // 5️⃣ AOS TOUJOURS À LA FIN
-    if (window.AOS) {
-      AOS.init({ once: true });
-      AOS.refresh();
-    }
-
+    
+    // Console message
     console.log('%c👨‍💻 Portfolio by Hocine FEDANI', 'font-size: 20px; font-weight: bold; color: #6366f1;');
-  } catch (e) {
-    console.error("Erreur chargement data", e);
-  }
+    console.log('%cDéveloppeur Full Stack passionné', 'font-size: 14px; color: #64748b;');
+    console.log('%c🔗 https://github.com/hocinefdn', 'font-size: 12px; color: #14b8a6;');
+  }, 300);
 });
-
 
 // Load data files
 function loadDataFiles() {
