@@ -232,3 +232,6 @@ if (document.readyState === "loading") {
 } else {
   loadSections();
 }
+
+document.dispatchEvent(new Event("sections:loaded"));
+

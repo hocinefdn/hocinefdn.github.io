@@ -2,35 +2,39 @@
 // MAIN JAVASCRIPT FILE
 // ===============================================
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Load data files dynamically
-  loadDataFiles();
-  
-  // Initialize components after a short delay to ensure HTML is loaded
-  setTimeout(() => {
-    // Render dynamic content
+document.addEventListener("sections:loaded", async () => {
+  try {
+    // 1️⃣ Charger les données
+    await loadDataFiles();
+
+    // 2️⃣ Render (HTML + DATA prêts)
     renderSkills();
     renderExperience();
     renderProjects();
     renderEducation();
-    
-    // Initialize components
+
+    // 3️⃣ Init composants
     initNavbar();
     initHero();
     initContactForm();
-    
-    // Initialize utilities
-    initAOS();
+
+    // 4️⃣ Utils
     initSmoothScroll();
     initBackToTop();
     initLazyLoading();
-    
-    // Console message
+
+    // 5️⃣ AOS TOUJOURS À LA FIN
+    if (window.AOS) {
+      AOS.init({ once: true });
+      AOS.refresh();
+    }
+
     console.log('%c👨‍💻 Portfolio by Hocine FEDANI', 'font-size: 20px; font-weight: bold; color: #6366f1;');
-    console.log('%cDéveloppeur Full Stack passionné', 'font-size: 14px; color: #64748b;');
-    console.log('%c🔗 https://github.com/hocinefdn', 'font-size: 12px; color: #14b8a6;');
-  }, 100);
+  } catch (e) {
+    console.error("Erreur chargement data", e);
+  }
 });
+
 
 // Load data files
 function loadDataFiles() {
@@ -41,14 +45,20 @@ function loadDataFiles() {
     'assets/data/projects.js',
     'assets/data/education.js'
   ];
-  
-  dataFiles.forEach(file => {
-    const script = document.createElement('script');
-    script.src = file;
-    script.async = false; // Load in order
-    document.head.appendChild(script);
-  });
+
+  return Promise.all(
+    dataFiles.map(src => {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
+    })
+  );
 }
+
 
 // Add animation styles for notifications
 const style = document.createElement('style');
